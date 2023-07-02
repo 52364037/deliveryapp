@@ -17,7 +17,7 @@ const Register = () => {
       <Form.Label>Password</Form.Label>
       <Form.Control type="password" placeholder="Ingrese una contraseña" />
     </Form.Group>
-
+    
     <Form.Group className="mb-3">
       <Form.Label>Confirmar Password</Form.Label>
       <Form.Control type="password" placeholder="Confirme la contraseña" />
