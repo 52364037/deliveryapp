@@ -1,29 +1,8 @@
-const fileUpLoad = async (image) => {
-  const cloudName = "dx2ld0uao";
-  const presetName = "deliveryapp";
-  const urlCloudinary = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
+import React from "react";
+import { Navigate, Outlet } from "react-router-dom";
 
-  const formData = new FormData();
-  formData.append("file", image);
-  formData.append("upload_preset", presetName);
-  formData.append("cloud_name", cloudName);
-
-  try {
-      const response = await fetch(urlCloudinary, {
-          method: "POST",
-          body: formData,
-      });
-
-      if (!response.ok) {
-          return null;
-      }
-
-      const data = await response.json();
-      return data.secure_url;
-  } catch (error) {
-      console.log(error);
-      return null;
-  }
+const PublicRouter = ({ isAutentication }) => {
+  return <div>{isAutentication ? <Navigate to="/home" /> : <Outlet />}</div>;
 };
 
-export default fileUpLoad;
+export default PublicRouter;
