@@ -8,7 +8,10 @@ import fileUpLoad from "../services/fileUpLoad/";
 import { useDispatch } from "react-redux";
 import { registerActionAsync } from "../redux/actions/userActions";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature-yolanda
 const schema = yup.object({
   name: yup.string().required("Por favor ingresar su nombre"),
   email: yup
