@@ -1,10 +1,15 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-
+// import fileUpLoad from '../services/fileUpLoad';
+import { useDispatch } from 'react-redux';
+// import { registerActionAsync } from "../redux/actions/userActions";
+import TextField from "@mui/material/TextField";
+import { StyledTextField } from "../../src/components/register/StyleRegister";
+import { Formulario } from "../components/register/StyleRegister";
+import { Button } from "../components/register/StyleRegister";
+import { Title } from "../components/register/StyleRegister";
 const schema = yup.object({
   email:yup.string().email("Debe ingresar un email").required("Este Campo es Obligatorio"),
   password:yup.string().required("Este Campo es Obligatorio").min(8,"La Contraseña debe contener al menos 8 caracteres.").max(16, "La contraseña no puede contener mas de 16 caracteres").oneOf([yup.ref("repeatPassword")], "Las contraseñas ingresadas no coinciden"),
@@ -13,6 +18,7 @@ const schema = yup.object({
 
 const Register = () => {
 
+const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
@@ -21,32 +27,64 @@ const Register = () => {
     resolver: yupResolver(schema),
   });
 
-const handleCreateUser = (dataForm) => {
-console.log(dataForm);
-}
+//  const handleCreateUser = async(dataForm) => {
+
+//  const avatar = await fileUpLoad(dataForm.avatar[0]);
+//  const newUser = {
+//    ...dataForm,
+//    avatar: avatar
+//  }
+//  console.log(newUser);
+//  dispatch(registerActionAsync(newUser));
+//  }
   return (
-    <Form className='p-5' onSubmit={handleSubmit(handleCreateUser)}>
-    <Form.Group className="mb-3">
-      <Form.Label>Email address</Form.Label>
-      <Form.Control type="email" placeholder="Ingrese su email" {...register("email")} />
-       <Form.Text className="text-muted">{errors.email?.message}</Form.Text> 
-    </Form.Group>
+    <section>
+      <div>
+        <Title>Create account</Title>
+      </div>
+    <Formulario className='p-5' 
+    // onSubmit={handleSubmit(handleCreateUser)}
+    >
+    <StyledTextField>
 
-    <Form.Group className="mb-3">
-      <Form.Label>Password</Form.Label>
-      <Form.Control type="password" placeholder="Ingrese una contraseña" {...register("password")}/>
-      <Form.Text className="text-muted">{errors.password?.message}</Form.Text>
-    </Form.Group>
+      <TextField
+       id="standard-basic"
+       label="Email"
+       variant="standard"
+       type="text"      
+       {...register("email")}
+            error={!!errors.email}
+            helperText={errors.email?.message}
+      />
+    </StyledTextField>
+    <StyledTextField>
+      <TextField
+       id="standard-basic"
+       label="Contraseña"
+       variant="standard"
+       type="text"      
+       {...register("password")}
+            error={!!errors.password}
+            helperText={errors.password?.message}
+      />
+    </StyledTextField>
+    <StyledTextField>
+      <TextField
+       id="standard-basic"
+       label="Repetir Contraseña"
+       variant="standard"
+       type="text"      
+       {...register("repeatPassword")}
+            error={!!errors.repeatPassword}
+            helperText={errors.repeatPassword?.message}
+      />
+    </StyledTextField>
+    <div>
+          <Button>Sing in</Button>
+        </div>
 
-    <Form.Group className="mb-3">
-      <Form.Label>Confirmar Password</Form.Label>
-      <Form.Control type="password" placeholder="Confirme la contraseña" {...register("repeatPassword")}/>
-      <Form.Text className="text-muted">{errors.repeatPassword?.message}</Form.Text>
-    </Form.Group>
-    <Button variant="primary" type="submit">
-      Registrarse
-    </Button>
-  </Form>
+  </Formulario>
+  </section>
   )
 }
 
