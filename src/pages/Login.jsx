@@ -7,6 +7,8 @@ import * as yup from "yup";
 import { useDispatch } from 'react-redux';
 import { loginActionAsync } from '../redux/actions/userActions';
 import { Link } from 'react-router-dom';
+import "../components/login/Login.scss"
+// import { BsFill0CircleFill } from "react-icons/bs";
 
 
 
@@ -30,6 +32,7 @@ const validationSchema = yup.object({
     .required("Este campo es obligatorio"),
   password: yup.string().required("Este campo es obligatorio"),
 });
+   
 const Login = () => {
 
   const dispatch = useDispatch()
@@ -47,9 +50,18 @@ const Login = () => {
   }
 
   return (
+    <main className="main">
+      <figure className='imagen_login'>
+        <img src="https://sprint-final-23fa8.web.app/static/media/logo.d35a45a3abc1c9b520c842d9997b03c5.svg" alt="" />
+      </figure>
+      <div>
+        <span className='span'>
+          Login or create an account with your phone number to start ordering
+        </span>
+      </div>
     <Form className="p-5" onSubmit={handleSubmit(logIn)}>
       <Form.Group className="mb-3">
-        <Form.Label>Email address</Form.Label>
+        
         <Form.Control
           type="email"
           placeholder="Ingrese su email"
@@ -59,24 +71,27 @@ const Login = () => {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Password</Form.Label>
+        
         <Form.Control
           type="password"
           placeholder="Ingrese una contraseña"
           {...register("password")}
         />
+        {/* <div className='icono'>
+        <BsFill0CircleFill/>
+        </div> */}
         <Form.Text className="text-muted">{errors.password?.message}</Form.Text>
       </Form.Group>
 
-      <Button variant="primary" type="submit">
+      <button type="submit" className= "button ">
         Iniciar Sesión
-      </Button>
+      </button>
 
       <p>¿No tines una cuenta? <Link to="/register">Haz click aquí!</Link></p>
-    </Form>
-  );
-}
+      </Form>
+      </main>
 
- 
+)
+};
 
-export default Login;
+  export default Login;
