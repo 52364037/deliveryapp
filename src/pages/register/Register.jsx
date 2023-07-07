@@ -4,9 +4,12 @@ import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import fileUpLoad from "../services/fileUpLoad";
+import fileUpLoad from "../../services/fileUpLoad";
 import { useDispatch } from "react-redux";
-import { registerActionAsync } from "../redux/actions/userActions";
+import { registerActionAsync } from "../../redux/actions/userActions";
+import "./StyleRegister.scss";
+import { IoIosEye } from 'react-icons/io';
+
 
 const schema = yup.object({
   name: yup.string().required("Por favor ingresar su nombre"),
@@ -67,33 +70,37 @@ const Register = () => {
   return (
     <Form className="p-5" onSubmit={handleSubmit(handleCreateUser)}>
       <Form.Group className="mb-3">
-        <Form.Label>Nombre</Form.Label>
+        <Form.Label>Create account</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Ingrese su nombre"
+          placeholder="Name"
           {...register("name")}
         />
         <Form.Text className="text-muted">{errors.name?.message}</Form.Text>
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>Email address</Form.Label>
+        {/* <Form.Label></Form.Label> */}
         <Form.Control
           type="email"
-          placeholder="Ingrese su email"
+          placeholder="Email"
           {...register("email")}
         />
         <Form.Text className="text-muted">{errors.email?.message}</Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Password</Form.Label>
+        {/* <Form.Label></Form.Label> */}
         <Form.Control
           type="password"
-          placeholder="Ingrese una contraseña"
+          placeholder="Password"
           {...register("password")}
         />
+        <div className='icono_ojo'>
+            <IoIosEye />
+          </div>
         <Form.Text className="text-muted">{errors.password?.message}</Form.Text>
       </Form.Group>
+      
 
       <Form.Group className="mb-3">
         <Form.Label>Confirmar Password</Form.Label>
@@ -106,14 +113,23 @@ const Register = () => {
           {errors.repeatPassword?.message}
         </Form.Text>
       </Form.Group>
-      <Form.Group className="mb-3">
-        <Form.Label>Avatar</Form.Label>
+     <div className="border_color">
+     <Form.Group className="mb-3">
+        {/* <Form.Label></Form.Label> */}
         <Form.Control type="file" {...register("avatar")} />
         <Form.Text className="text-muted">{errors.avatar?.message}</Form.Text>
       </Form.Group>
-      <Button variant="primary" type="submit">
-        Registrarse
+     </div>
+      <div className="boton_register">
+      <Button variant="" type="submit">
+        Sing in
       </Button>
+      </div>
+      <div className="login_inicio">
+      <Button variant="" type="submit">
+        Login
+      </Button>
+      </div>
     </Form>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { logoutActionAsync } from "../redux/actions/userActions";
+import { logoutActionAsync } from "../../redux/actions/userActions";
 import Image from "react-bootstrap/Image";
 
 const Home = () => {

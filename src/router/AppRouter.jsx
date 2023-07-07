@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Register from "../pages/Register";
+import Register from "../pages/register/Register";
 import PublicRouter from "./PublicRouter";
 import PrivateRouter from "./PrivateRouter";
 import Layout from "../components/Layout";
-import Login from "../pages/Login";
-import Home from "../pages/Home";
+import Login from "../pages/login/Login";
+import Home from "../pages/home/Home";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../Firebase/firebaseConfig";
 import Spinner from "react-bootstrap/Spinner";
