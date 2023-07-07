@@ -23,6 +23,13 @@ const schema = yup.object({
       
 });
 
+const validationSchema = yup.object({
+  email: yup
+    .string()
+    .email("Debes ingresar tu correo electronico")
+    .required("Este campo es obligatorio"),
+  password: yup.string().required("Este campo es obligatorio"),
+});
 const Login = () => {
 
   const dispatch = useDispatch()
@@ -70,4 +77,6 @@ const Login = () => {
   );
 }
 
-export default Login
+ 
+
+export default Login;
