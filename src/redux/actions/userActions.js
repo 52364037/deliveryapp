@@ -4,8 +4,7 @@ import {
   signOut,
   updateProfile,
   signInWithPopup,
-  GoogleAuthProvider,
-  signInWithRedirect, getRedirectResult
+  GoogleAuthProvider
 } from "firebase/auth";
 import { auth, google } from "../../Firebase/firebaseConfig";
 import { userTypes } from "../types/userTypes";
@@ -98,19 +97,25 @@ export const loginActionSync = (user) => {
 };
 
 export const actionLoginGoogle = () => {
-  return  (dispatch) => {
+  return (dispatch) => {
     signInWithPopup(auth, google)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
+        // const credential = GoogleAuthProvider.credentialFromResult(result);
+        // const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
         // IdP data available using getAdditionalUserInfo(result)
         // ...
 
-        console.log(token);
-        console.log(user);
+        const userLogged = {
+          email: user.email,
+          name: user.displayName,
+          avatar: user.photoURL,
+          accessToken: user.accessToken,
+        }
+        console.log(userLogged);
+        dispatch(loginActionSync(userLogged));
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
