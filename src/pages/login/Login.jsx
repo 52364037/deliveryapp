@@ -11,7 +11,8 @@ import "./Login.scss";
 import { IoIosMail } from 'react-icons/io';
 import { IoIosLock } from 'react-icons/io';
 import { IoIosEye } from 'react-icons/io';
-import google from '../../assets/descarga.png';
+import google from '../../assets/google-logo.png';
+import '../../assets/logo-facebook.png';
 
 const schema = yup.object({
 
@@ -102,9 +103,18 @@ const Login = () => {
           <p> <Link to="/register">Create account</Link></p>
         </div>
       </Form>
-      <figure onClick={handleGoogleLogin}>
+     <div className='Login_google'>
+     <figure onClick={handleGoogleLogin}>
         <img src={google} alt="google" />
+        <p>LOGIN WITH GOOGLE</p>
       </figure>
+     </div>
+     {/* <div>
+      <figure className='logo_face'>
+        <img src="../../assets/logo-facebook.png" alt="" />
+      </figure>
+     </div> */}
+     
     </main>
 
   )
