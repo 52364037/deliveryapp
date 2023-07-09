@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { loginActionAsync } from '../redux/actions/userActions';
 import { Link } from 'react-router-dom';
 import "../components/login/Login.scss"
-// import { BsFill0CircleFill } from "react-icons/bs";
+import { BsFill0CircleFill } from "react-icons/bs";
 
 
 
@@ -77,9 +77,11 @@ const Login = () => {
           placeholder="Ingrese una contraseña"
           {...register("password")}
         />
-        {/* <div className='icono'>
+
+         <div className='icono'>
         <BsFill0CircleFill/>
-        </div> */}
+        </div> 
+        
         <Form.Text className="text-muted">{errors.password?.message}</Form.Text>
       </Form.Group>
 
