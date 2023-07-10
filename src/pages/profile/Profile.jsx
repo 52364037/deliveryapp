@@ -2,9 +2,9 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutActionAsync } from "../../redux/actions/userActions";
 import Image from "react-bootstrap/Image";
-import './Home.scss';
+import './Profile.scss';
 
-const Home = () => {
+const Profile = () => {
   const dispatch = useDispatch();
 
   const { user } = useSelector((store) => store.user);
@@ -12,16 +12,24 @@ const Home = () => {
 
   return (
     <div>
-      Home
-      <div>
+      <div className="Avatar">
         <Image src={user?.avatar} roundedCircle />
+      </div>
+      <div className="Name_user">
         <h2>{user?.name}</h2>
       </div>
-      <button onClick={() => dispatch(logoutActionAsync())}>
-        Cerrar Sesión
-      </button>
+    <div className="cerrar_sesion">
+    <button onClick={() => dispatch(logoutActionAsync())}>
+        Logout
+      </button> 
     </div>
-  );
+    </div>
+    
+  )
+    
 };
+ 
 
-export default Home;
+
+
+export default Profile;

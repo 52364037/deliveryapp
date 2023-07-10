@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Avatar {
+    position: relative;
+    
+    width: 70px; // Cambia el ancho del contenedor
+    left: 175px;
+    top: 40px;
+    height: 70px; // Cambia la altura del contenedor
+    overflow: hidden;
+    img {
+        position: absolute;
+        width: 60px; // Cambia el ancho de la imagen para que ocupe todo el espacio del contenedor
+        height: 60px; // Cambia la altura de la imagen para que ocupe todo el espacio del contenedor
+        object-fit: cover; // Ajusta la imagen dentro del contenedor manteniendo la relación de aspecto
+        top: 52%; // Mueve la imagen hacia abajo en un 50% de la altura del contenedor
+        left: 45%; // Mueve la imagen hacia la derecha en un 50% del ancho del contenedor
+        transform: translate(-50%, -50%); // Vuelve a posicionar la imagen en el centro mediante desplazamiento
+    }
+}
+
+.Name_user{
+    
+    position: relative;
+    text-align: center;
+    top: 50px;
+
+    h2{
+        font-size: small;
+    }
+}
+
+.cerrar_sesion {
+    position: absolute;
+    background-color: aqua;
+    top: 550px;
+    left: 250px;
+}
