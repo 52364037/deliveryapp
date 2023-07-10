@@ -1,0 +1,86 @@
+// .logo-Home{
+//     // width: 10px;
+//     // height: 32px;
+//     // top: 80px;
+//     // left: 16px;
+//     border: 100px;
+
+// }
+
+.Promo1{
+    width: 259px;
+    height: 100px;
+    // top: 100px;
+    // left: 16px;
+    // float: left;
+    position: relative;
+    top: 30px;
+    margin-right: 80px;
+    
+}
+
+.Promo2{
+    // width: 259px;
+    // height: 60px;
+    top: -70px;
+    //  left: 100px;
+    float: right;
+    position: relative;
+    left: 50px;
+    display: flex;
+    
+}
+
+.Text{
+    // width: 138px;
+    // height: 16px;
+    // top: 20000px;
+    // left: 16px;
+    font-family: Roboto;
+
+    // font-size: 19px;
+    gap: 50px;
+    margin-top: 30px;
+    margin-right: 80px;
+    // line-height: 169px;
+    // letter-spacing: 0em;
+    text-align: initial;
+
+
+}
+
+.FilterButton{
+    
+    // width: 454px;
+    // height: 32px;
+    // top: 236px;
+    // left: 16px;
+
+    background-color: yellow;
+    gap: 50px;
+    // width: 10%;
+    color: black;
+    border: yellow;
+    // border-radius: 5px;
+    // margin-top: 1px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagenRestaurantCard{
+    margin-top: 15px;
+  }
+
+ .imagenRestaurantCard1{
+    margin-top: 10px;
+ }
+
+ .imagenRestaurantCard2{
+    margin-top: 10px;
+ }
+  
+  

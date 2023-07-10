@@ -60,8 +60,7 @@ const Login = () => {
         </span>
       </div>
     <Form className="p-5" onSubmit={handleSubmit(logIn)}>
-      <Form.Group className="mb-3">
-        
+      <Form.Group className="mb-3">    
         <Form.Control
           type="email"
           placeholder="Ingrese su email"
