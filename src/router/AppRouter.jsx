@@ -56,9 +56,11 @@ const AppRouter = () => {
           <Route element={<PublicRouter isAutentication={isLoggedIn} />}>
             <Route index element={<Login />} />
             <Route path="register" element={<Register />} />
+            
           </Route>
           <Route element={<PrivateRouter isAutentication={isLoggedIn} />}>
             <Route path="home" element={<Home />} />
+            
           </Route>
         </Route>
       </Routes>
