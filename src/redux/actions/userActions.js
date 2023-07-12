@@ -4,7 +4,8 @@ import {
   signOut,
   updateProfile,
   signInWithPopup,
-  GoogleAuthProvider
+  GoogleAuthProvider,
+  // createEditWithEmailAndName,
 } from "firebase/auth";
 import { auth, google } from "../../Firebase/firebaseConfig";
 import { userTypes } from "../types/userTypes";
@@ -17,7 +18,7 @@ export const registerActionAsync = ({ email, password, name, avatar }) => {
         email,
         password
       );
-
+  
       await updateProfile(auth.currentUser, {
         displayName: name,
         photoURL: avatar,
@@ -33,6 +34,31 @@ export const registerActionAsync = ({ email, password, name, avatar }) => {
     }
   };
 };
+
+// export const editActionAsync = ({ email, name }) => {
+//   return async (dispatch) => {
+//     try {
+//       const { edit } = await createEditWithEmailAndName(
+//         auth,
+//         email,
+//         name,
+//       );
+//       await updateProfile(auth.currentEdit, {
+//         displayName: name,
+//         displayName: email,
+//       });
+// //       const { accessToken } = edit.auth.currentEdit;
+// //       console.log(edit);
+// //       dispatch(editActionSyncActionSync({ email, name, accessToken }, null));
+//     } catch (error) {
+//       console.log(error);
+// //       dispatch(
+// // editActionSync({}, { code: error.code, message: error.message })
+// //       );
+//     };
+//   };
+// };
+    
 
 const registerActionSync = (newUser, error) => {
   return {

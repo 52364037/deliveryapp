@@ -59,10 +59,14 @@
 }
 
 .crear_usuario {
+    
     font-size: 15px;
     text-align: center;
     // top: 50px;
     margin-top: 150px;
+    .p-Link {
+        color: black;
+    }
 
 
 
@@ -70,34 +74,66 @@
 }
 
 .Login_google {
-
+    position: absolute;
+    background-color: yellow;
+    border-radius: 1px;
+    top: 48%;
+    margin: 1dvb;
+    padding-inline: 19%;
+    padding-block: 30px;
+    left: 39PX;
+    border-right: 1px solid black; 
 
     img {
-        position: relative;
-        width: 150px;
-        // font-size: xx-small;
-        // text-align: center;
-        background-color: yellow;
-        border-radius: 5px;
-        margin-top: -395px;
-        // margin: 180px;
-        padding-inline: 40px;
-        // padding-block: 30px;
-        right: -128px;
-        padding-left: 40px;
+       
+        background-size: -20px; // Puedes ajustar el valor según tus necesidades
+        width: 20%; // Ajusta el ancho según tus necesidades
+        height: auto;
+        position: absolute;
+        margin-top: -25px;
+        left: 10PX;
+        
+    }
+
+    p {
+        position: absolute;
+        font-size: 2vb;
+        margin-top: -25px;
+        left: 55PX;
+    }
+
+}
+.logo_face {
+    position: absolute;
+    background-color: yellow;
+    border-radius: 2px;
+    top: 48%;
+    margin: 1dvb;
+    padding-inline: 19%;
+    padding-block: 38px;
+    left: 188PX;
+    border-left: 1px solid black; 
+    
+    
+
+    img {
+        width: 15%; 
+        height: auto;
+        position: absolute;
+        margin-top: -13px; 
+        left: 15PX;
 
 
     }
 
     p {
         position: absolute;
-        font-size: 1.5vb;
-        // top: 10px;
-        // margin: -100px;
-        margin-top: -200px;
-        right: 140px;
+        font-size: 2vb;
+        margin-top: -12%;
+        left: 60PX;
     }
 
 
 
 }
+

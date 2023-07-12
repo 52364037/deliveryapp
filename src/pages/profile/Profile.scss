@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Avatar {
+    position: relative;
+
+    width: 70px; // Cambia el ancho del contenedor
+    left: 175px;
+    top: 40px;
+    height: 70px; // Cambia la altura del contenedor
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        width: 60px; // Cambia el ancho de la imagen para que ocupe todo el espacio del contenedor
+        height: 60px; // Cambia la altura de la imagen para que ocupe todo el espacio del contenedor
+        object-fit: cover; // Ajusta la imagen dentro del contenedor manteniendo la relación de aspecto
+        top: 52%; // Mueve la imagen hacia abajo en un 50% de la altura del contenedor
+        left: 45%; // Mueve la imagen hacia la derecha en un 50% del ancho del contenedor
+        transform: translate(-50%, -50%); // Vuelve a posicionar la imagen en el centro mediante desplazamiento
+    }
+}
+
+.Name_user {
+
+    position: relative;
+    text-align: center;
+    top: 50px;
+
+    h2 {
+        font-size: small;
+    }
+}
+
+.cerrar_sesion {
+    position: absolute;
+    background-color: aqua;
+    top: 550px;
+    left: 250px;
+}
+
+.edit {
+    background-color: rgb(236, 238, 238);
+    position: absolute;
+    width: 358px;
+    height: 44px;
+    top: 150px;
+    left: 16px;
+    border-radius: 10px;
+
+
+    .person-icon {
+        position: absolute;
+        width: 6%;
+        height: 26px;
+        top: 10px;
+        left: 10px;
+
+    }
+
+    h3 {
+        position: relative;
+        left: 40px;
+        font-size: small;
+        top: 17px;
+    }
+
+    .chevron1 {
+        position: absolute;
+        height: 14px;
+        top: 16;
+        left: 336px;
+        width: 5px;
+        // height: 0;
+        // border-left: 80px solid transparent;
+        // border-right: 20px solid transparent;
+        transform: rotate(180deg);
+    }
+
+}
+
+.notification {
+    background-color: rgb(236, 238, 238);
+    position: absolute;
+    width: 358px;
+    height: 44px;
+    top: 200px;
+    left: 16px;
+    border-radius: 10px;
+
+    .campana {
+        position: absolute;
+        width: 6%;
+        height: 26px;
+        top: 10px;
+        left: 10px;
+    }
+
+    h3 {
+        position: relative;
+        left: 40px;
+        font-size: small;
+        top: 17px;
+    }
+
+    .chevron2 {
+        position: absolute;
+        height: 14px;
+        top: 16;
+        left: 336px;
+        width: 5px;
+        transform: rotate(180deg);
+    }
+}
+
+.payment {
+    background-color: rgb(236, 238, 238);
+    position: absolute;
+    width: 358px;
+    height: 44px;
+    top: 250px;
+    left: 16px;
+    border-radius: 10px;
+
+    .tarjeta {
+        position: absolute;
+        width: 6%;
+        height: 26px;
+        top: 10px;
+        left: 10px;
+    }
+
+    h3 {
+        position: relative;
+        left: 40px;
+        font-size: small;
+        top: 17px;
+    }
+
+    .chevron3 {
+        position: absolute;
+        height: 14px;
+        top: 13;
+        left: 336px;
+        width: 7px;
+        transform: rotate(180deg);
+    }
+}
+
+.language {
+    background-color: rgb(236, 238, 238);
+    position: absolute;
+    width: 358px;
+    height: 44px;
+    top: 300px;
+    left: 16px;
+    border-radius: 10px;
+
+    .lenguaje {
+        position: absolute;
+        width: 6%;
+        height: 26px;
+        top: 10px;
+        left: 10px;
+    }
+
+    h3 {
+        position: relative;
+        left: 40px;
+        font-size: small;
+        top: 17px;
+    }
+
+    .chevron4 {
+        position: absolute;
+        height: 14px;
+        top: 16;
+        left: 336px;
+        width: 5px;
+        // height: 0;
+        // border-left: 80px solid transparent;
+        // border-right: 20px solid transparent;
+        transform: rotate(180deg);
+    }
+}
+
+.location {
+    background-color: rgb(236, 238, 238);
+    position: absolute;
+    width: 358px;
+    height: 44px;
+    top: 350px;
+    left: 16px;
+    border-radius: 10px;
+
+    .ubicación {
+        position: absolute;
+        width: 6%;
+        height: 26px;
+        top: 10px;
+        left: 10px;
+    }
+
+    h3 {
+        position: relative;
+        left: 40px;
+        font-size: small;
+        top: 17px;
+    }
+
+    .chevron5 {
+        position: absolute;
+        height: 14px;
+        top: 13;
+        left: 336px;
+        width: 7px;
+        transform: rotate(180deg);
+    }
+}
+
+.faq {
+
+    background-color: rgb(236, 238, 238);
+    position: absolute;
+    width: 358px;
+    height: 44px;
+    top: 400px;
+    left: 16px;
+    border-radius: 10px;
+
+    .preguntas {
+        position: absolute;
+        width: 6%;
+        height: 26px;
+        top: 10px;
+        left: 10px;
+    }
+
+    h3 {
+        position: relative;
+        left: 40px;
+        font-size: small;
+        top: 17px;
+    }
+
+    .chevron6 {
+        position: absolute;
+        height: 14px;
+        top: 13;
+        left: 336px;
+        width: 7px;
+        transform: rotate(180deg);
+    }
+}
+
+.support {
+
+    background-color: rgb(236, 238, 238);
+    position: absolute;
+    width: 358px;
+    height: 44px;
+    top: 450px;
+    left: 16px;
+    border-radius: 10px;
+
+    .tel {
+        position: absolute;
+        width: 6%;
+        height: 26px;
+        top: 10px;
+        left: 10px;
+    }
+
+    h3 {
+        position: relative;
+        left: 40px;
+        font-size: small;
+        top: 17px;
+    }
+
+    .chevron7 {
+        position: absolute;
+        height: 14px;
+        top: 13;
+        left: 336px;
+        width: 7px;
+        transform: rotate(180deg);
+    }
+}
+
+button {
+    background-color: rgb(236, 238, 238);
+    position: absolute;
+    width: 358px;
+    height: 44px;
+    top: 500px;
+    left: 16px;
+    border: none;
+
+
+
+    h3 {
+        position: relative;
+        left: -140px;
+        font-size: small;
+        top: 5px;
+    }
+
+    .chevron {
+        position: absolute;
+        height: 4px;
+        top: 15;
+        left: 336px;
+        width: 6px;
+        transform: rotate(180deg);
+    }
+}
+
+.container_barra {
+    display: flex;
+    background-color: rgb(236, 238, 238);
+    position: absolute;
+    width: 458px;
+    height: 64px;
+    top: 600px;
+    left: 16px;
+    // border: none;
+
+
+
+    .img_home {
+        position: relative;
+        margin-left: 20px;
+        width: 6%;
+        height: 100px;
+        top: 20px;
+
+
+        .home {
+           
+            padding: 0px;
+            width: 2rem;
+            height: 2rem;
+            display: inline-block;
+
+        }
+    }
+
+    .img_search {
+
+        position: absolute;
+        margin-left: 120px;
+        width: 150px;
+        height: 100px;
+        top: 20px;
+
+        img {
+            width: 23px;
+            height: 23px;
+        }
+
+    }
+
+    .reloj {
+        position: absolute;
+        margin-left: 220px;
+        width: 150px;
+        height: 100px;
+        top: 20px;
+
+        .time {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .person {
+        position: absolute;
+        margin-left: 320px;
+        width: 150px;
+        height: 100px;
+        top: 20px;
+
+        .persona {
+            width: 2rem;
+            height: 2rem;
+        }
+
+    }
+}
