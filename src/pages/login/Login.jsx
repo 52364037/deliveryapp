@@ -12,7 +12,7 @@ import { IoIosMail } from 'react-icons/io';
 import { IoIosLock } from 'react-icons/io';
 import { IoIosEye } from 'react-icons/io';
 import google from '../../assets/google-logo.png';
-import facebook from '../../assets/logo-facebook.png';
+import facebook from '../../assets/face.png';
 
 const schema = yup.object({
 
@@ -104,14 +104,17 @@ const Login = () => {
         </div>
       </Form>
      <div className='Login_google'>
-     <figure onClick={handleGoogleLogin}>
+   <div>
+   <figure onClick={handleGoogleLogin}>
         <img src={google} alt="google" />
         <p>LOGIN WITH GOOGLE</p>
       </figure>
+   </div>
      </div>
      <div>
       <figure className='logo_face'>
         <img src={facebook} alt="facebook" />
+        <p>LOGIN WITH FACEBOOK</p>
       </figure>
      </div>
      
