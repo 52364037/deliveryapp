@@ -6,6 +6,8 @@ import imagenPromo2 from "../../assets/Promo 2.png"
 import imagenRestaurantCard from "../../assets/Restaurant card.png"
 import imagenRestaurantCard1 from "../../assets/Restaurant card (1).png"
 import imagenRestaurantCard2 from "../../assets/Restaurant card (2).png"
+import categories from "../../assets/Categories.png"
+
 
 const Home = ()=> {
   return(
@@ -26,19 +28,23 @@ const Home = ()=> {
     <h5>Restaurants and cafes</h5>
     </div>
 
-  <div className='button-container'>
-    <button type="submit" className="button ">
+    <div className='categoriesBotonesFiltrado'>
+    <img src={categories} alt="imagen-Promo2" />
+    </div>
+
+  {/* <div className='button-container'>
+    <button type="submit" className="buttonAll ">
          All
         </button>
 
-        <button type="submit" className="button ">
+        <button type="submit" className="buttonPizza ">
         Pizza
         </button>
 
-        <button type="submit" className="button ">
+        <button type="submit" className="buttonHamburguesa ">
          Hamburguesa
         </button>
-        </div>
+        </div> */}
 
         <div className='imagenRestaurantCard'>
     <img src={imagenRestaurantCard} alt="imagen-Promo2" />
